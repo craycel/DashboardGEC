@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Cookie, Session Storage and Local storage</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#cookie" aria-controls="cookie" role="tab" data-toggle="tab">Cookie</a></li>
+                <li role="presentation"><a href="#sessionstorage" aria-controls="sessionstorage" role="tab" data-toggle="tab">Session Storage</a></li>
+                <li role="presentation"><a href="#localstorage" aria-controls="localstorage" role="tab" data-toggle="tab">Local Storage</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="cookie">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="label label-danger">Cookie </span>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Cookie" aria-describedby="basic-addon1">
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="testWebStaff.testCode()">Primary</button>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="sessionstorage">
+                    <span class="label label-danger">Session </span>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Session" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="localstorage">
+                    <span class="label label-danger">Local </span>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Local" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="testWebStaff.testCode()">Primary</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+    <div class="col-xs-6 col-md-4"></div>
+    <div class="col-xs-6 col-md-4"></div>
+    <div class="col-xs-6 col-md-4"></div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+    <div class="col-xs-6"></div>
+    <div class="col-xs-6"></div>
+</div>
+
+
+@section Scripts{
+    <script src="~/js/app/testWebStaff.js" asp-append-version="true"></script>
+}
