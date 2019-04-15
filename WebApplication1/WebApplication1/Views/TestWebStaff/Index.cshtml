@@ -27,27 +27,29 @@
                         <div class="col-xs-12">
                             <span class="label label-danger">Cookie </span>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Cookie" aria-describedby="basic-addon1">
+                                <input type="text" id="cookieValue" class="form-control" placeholder="Cookie" aria-describedby="basic-addon1">
                             </div>
 
-                            <button type="button" class="btn btn-primary" onclick="testWebStaff.testCode()">Primary</button>
+                            <button type="button" class="btn btn-primary" onclick="testWebStaff.setCookie($('#cookieValue').val())">Set Cookie</button>
                         </div>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="sessionstorage">
                     <span class="label label-danger">Session </span>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Session" aria-describedby="basic-addon1">
+                        <input type="text" id="ssValue" class="form-control" placeholder="Session" aria-describedby="basic-addon1">
                     </div>
+                    <button type="button" class="btn btn-primary" onclick="testWebStaff.setSS('name', $('#ssValue').val())">Set SS</button>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="localstorage">
                     <span class="label label-danger">Local </span>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Local" aria-describedby="basic-addon1">
+                        <input type="text" id="lsValue" class="form-control" placeholder="Local" aria-describedby="basic-addon1">
                     </div>
+                    <button type="button" class="btn btn-primary" onclick="testWebStaff.setLS('name',$('#lsValue').val())">Set LS</button>
                 </div>
+
             </div>
-            <button type="button" class="btn btn-primary" onclick="testWebStaff.testCode()">Primary</button>
         </div>
     </div>
 </div>
